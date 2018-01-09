@@ -1,15 +1,17 @@
-eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 1
-    leaseExpirationDurationInSeconds: 2
-  client:
-    serviceUrl:
-      defaultZone: ${eurekahost} 
-    healthcheck:
-      enabled: true
-    lease:
-      duration: 5
-
+---
 spring:
   application:
-    name: catalogue-service	
+    name: crudoperations
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: SAMPLE-HYSTRIX-CONFIG
+
+eureka:
+  instance:
+    nonSecurePort: ${server.port:8089}
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
