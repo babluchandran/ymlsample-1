@@ -15,14 +15,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://${eureka.host:35.168.21.233}:${eureka.port:8761}/eureka
-zuul:
-  routes:
-    echo:
-      path: /echo/**
-      url: http://echo-service:9098/ 
-    crud:
-      path: /crud/**
-      url: http://crud-service:9099/
-    hystrix:
-      path: /hystrix/**
-      url: http://hystrix-monitor:8989/
