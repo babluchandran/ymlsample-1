@@ -1,0 +1,15 @@
+---
+spring:
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: SAMPLE-HYSTRIX-CONFIG
+
+eureka:
+  instance:
+    nonSecurePort: ${server.port:8089}
+  client:
+    serviceUrl:
+      defaultZone: http://34.226.135.35:8761/eureka
