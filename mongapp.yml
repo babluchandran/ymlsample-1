@@ -18,4 +18,4 @@ eureka:
 
 spring.data.mongodb:
   database: babluc
-  uri: mongodb://54.159.205.212:27017
+  uri: mongodb://54.159.205.212:27018
