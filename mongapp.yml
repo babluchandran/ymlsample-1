@@ -17,5 +17,5 @@ eureka:
 
 
 spring.data.mongodb:
-  database: sample
+  database: bablu
   uri: mongodb://54.159.205.212:27017
