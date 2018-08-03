@@ -1,3 +1,21 @@
+---
+spring:
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: SAMPLE-HYSTRIX-CONFIG
+
+eureka:
+  instance:
+    nonSecurePort: ${server.port:8089}
+  client:
+    serviceUrl:
+      defaultZone: http://54.161.106.253:8761/eureka
+#      defaultZone: http://54.159.205.212:8761/eureka
+
+
 spring.data.mongodb:
   database: dojdb
   uri: mongodb://54.159.205.212:27017
